@@ -56,8 +56,8 @@ def train():
     print(f"✅ Training Complete. Final Accuracy: {acc*100:.2f}%")
     
     # Save everything
-    joblib.dump(model, 'ml/models/fraud_model.pkl')
-    joblib.dump(scaler, 'ml/models/scaler.pkl')
+    joblib.dump(model, 'models/fraud_model.pkl')
+    joblib.dump(scaler, 'models/scaler.pkl')
 
 if __name__ == "__main__":
     train()
