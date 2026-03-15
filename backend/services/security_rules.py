@@ -9,8 +9,8 @@ from cyber_rules.risk_scoring import score_transaction
 def run_rules(transaction_data: dict) -> dict:
     user_profile = {
         "registered_location" : transaction_data.get("location", "Unknown"),
-        "known_devices"       : [],
-        "known_receivers"     : [],
+        "known_devices"       : [transaction_data.get("device_id", "")],
+        "known_receivers"     : [transaction_data.get("receiver_id", "")],
         "recent_transactions" : []
     }
 
